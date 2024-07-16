@@ -8,10 +8,17 @@ export default function RTE({name, control, label, defaultValue =""}) {
   
   return (
     <div className='w-full'> 
-    {label && <label className='inline-block mb-1 pl-1'>{label}</label>}
+    {label && <label className='inline-block mb-1 pl-1 text-xl text-indigo-950 font-bold'>{label}</label>}
     <Controller
     name={name || "content"}
     control={control}
+    rules={{
+      required: "Post content is required",
+      maxLength: {
+        value: 190000,
+        message: "Content is too long",
+      },
+    }}
     render={({field: {onChange}}) => ( 
         <Editor
         apiKey={conf.tinyMCEApiKey}

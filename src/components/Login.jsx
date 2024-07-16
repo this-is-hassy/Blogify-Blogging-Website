@@ -115,14 +115,14 @@ function Login() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-neutral-100">
-            <div className="w-full max-w-lg bg-white rounded-xl shadow-md p-8 border border-neutral-200">
+        <div className="flex items-center justify-center min-h-screen ">
+            <div className="w-full max-w-lg bg-zinc-100 rounded-xl shadow-md p-8 border border-neutral-200">
                 <div className="mb-4 flex justify-center">
-                    <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%" />
+                    <span className="inline-block w-full ">
+                        <Logo width="100%" className=' text-8xl font-extrabold' />
                     </span>
                 </div>
-                <h2 className="text-center text-2xl font-bold text-neutral-900">Sign in to your account</h2>
+                <h2 className="text-center text-2xl font-bold text-neutral-900">Sign in to your Account</h2>
                 <p className="mt-2 text-center text-sm text-neutral-600">
                     Don't have an account?&nbsp;
                     <Link to="/signup" className="font-medium text-primary-600 hover:underline">
@@ -151,7 +151,7 @@ function Login() {
                                 required: true,
                             })}
                         />
-                        <Button type="submit" className="w-full bg-primary-600 text-white hover:bg-primary-700">
+                        <Button type="submit" className="w-full bg-primary-600 text-xl font-bold text-white hover:bg-primary-700">
                             Sign in
                         </Button>
                     </div>

@@ -1,15 +1,17 @@
 import React from "react";
 import Logo from "../Logo";
+import { Container } from '../index'
 
 function Footer() {
   return (
-    <footer class="text-slate-200 bg-indigo-950 body-font">
-      <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <Container>
+    <footer class="text-slate-200 bg-indigo-950 flex">
+      <div class="container px-5 py-8 max-w-full flex items-center sm:flex-row flex-col">
         <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
           
           <Logo width="100px" />
         </a>
-        <p class="text-sm text-slate-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
+        <p class="text-lg font-semibold text-slate-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
           Created by Hassan Hameed
         
         </p>
@@ -72,6 +74,7 @@ function Footer() {
         </span>
       </div>
     </footer>
+    </Container>
   );
 }
 

@@ -6,9 +6,12 @@ import {login, logout} from "./store/authSlice"
 import { Footer, Header } from './components'
 import { Outlet } from 'react-router-dom'
 
+
 function App() {
   const [loading, setLoading] = useState(true)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
+
 
   useEffect(() => {
     authService.getCurrentUser()
@@ -23,16 +26,24 @@ function App() {
   }, [])
   
   return !loading ? (
-    <div className='min-h-screen flex flex-wrap content-between bg-gray-300 shadow-xl'>
+    <>
+    <Header />
+    <div className=' flex flex-wrap content-between bg-gray-300 min-h-screen shadow-xl'>
       <div className='w-full block'>
-        <Header />
         <main>
-        <div className='text-5xl font-bold pt-7 text-zinc-500'>tODO:</div> <Outlet />
+        <div className='text-5xl font-bold pt-7 text-zinc-500'>Read Your Favourite `BLOGS`</div>
+         <Outlet />
         </main>
-        <Footer />
       </div>
     </div>
-  ) : null
+        <Footer />
+    </>
+  ) : (
+    <div className="flex items-center justify-center min-h-screen">
+      <img src="/loadingIcon.png" alt="loading" className='w-10 flex justify-center items-center h-screen' />
+    </div>
+  )
 }
 
 export default App
+

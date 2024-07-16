@@ -20,7 +20,7 @@ function Home() {
         <Container>
           <div className="flex flex-wrap">
             <div className="p-2 w-full">
-            <img src="/loadingIcon.png" alt="loading" className='w-10 flex justify-center items-center h-screen' />
+            <img src="/loadingIcon.png" alt="loading" className='h-20 animate-spin flex justify-center items-center' />
               {/* <h1 className="text-2xl font-bold hover:text-gray-500">
                                 Login to read posts
                             </h1> */}

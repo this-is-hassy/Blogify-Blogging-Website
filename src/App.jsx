@@ -40,7 +40,7 @@ function App() {
     </>
   ) : (
     <div className="flex items-center justify-center min-h-screen">
-      <img src="/loadingIcon.png" alt="loading" className='w-10 flex justify-center items-center h-screen' />
+      <img src="/loadingIcon.png" alt="loading" className='h-20  flex justify-center items-center animate-spin' />
     </div>
   )
 }

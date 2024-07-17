@@ -15,18 +15,17 @@ function Home() {
 
   if (posts.length === 0) {
     return (
-      <div className="w-full py-8 mt-4 text-center">
-        <Container>
+      <div className="w-full py-8 mt-60 text-center">
+      <Container>
           <div className="flex flex-wrap">
-                      <div className="flex items-center justify-center min-h-screen">
-            <img src="/loadingIcon.png" alt="loading" className='h-20 animate-spin flex justify-center items-center' />
-              {/* <h1 className="text-2xl font-bold hover:text-gray-500">
-                                Login to read posts
-                            </h1> */}
-            </div>
+              <div className="p-2 w-full">
+                  <h1 className="text-5xl font-extrabold text-red-800 hover:text-red-950">
+                      Login to read posts
+                  </h1>
+              </div>
           </div>
-        </Container>
-      </div>
+      </Container>
+  </div>
     );
   }
   return (
